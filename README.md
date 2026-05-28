@@ -94,6 +94,7 @@ reports/    -> Reportes STA y potencia
 layout/     -> Layout final generado
 docs/       -> Informe/PDF del proyecto
 ```
+"El repositorio incluye verificación automática mediante GitHub Actions para ejecutar simulaciones de Verilog en cada push."
 
 ## Autores
 
