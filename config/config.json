@@ -1,0 +1,26 @@
+{
+    "DESIGN_NAME": "mac_mas_core",
+
+    "VERILOG_FILES": [
+        "dir::src/mac_mas_core.v",
+        "dir::src/fpmul.v",
+        "dir::src/fp16_sum_res_pipe.v",
+        "dir::src/myreg.v",
+        "dir::src/rounder.v",
+        "dir::src/exp_mant_logic.v",
+        "dir::src/sum_res_pp.v",
+        "dir::src/op_sign_logic.v",
+        "dir::src/leading_zero_norm.v",
+        "dir::src/add_renorm.v"
+    ],
+
+    "SYNTH_STRATEGY": "AREA 0",
+
+    "SYNTH_SHARE_RESOURCES": 1,
+
+    "PL_TARGET_DENSITY": 0.65,
+
+    "PNR_SDC_FILE" : "dir::mac_mas_core.sdc",
+
+    "SIGNOFF_SDC_FILE":"dir::mac_mas_core.sdc"
+}
