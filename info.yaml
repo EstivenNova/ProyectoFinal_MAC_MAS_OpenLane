@@ -1,0 +1,19 @@
+project:
+  title: "MAC/MAS Floating Point Core"
+  author: "Estiven Nova"
+  description: "MAC/MAS FP16 arithmetic core implemented in Verilog and synthesized using OpenLane SKY130."
+  language: "Verilog HDL"
+  technology: "SKY130"
+
+module:
+  name: "mac_mas_core"
+  inputs:
+    - clk
+    - rst
+    - start
+    - mode
+    - A[15:0]
+    - B[15:0]
+  outputs:
+    - ready
+    - ACC_OUT[15:0]
