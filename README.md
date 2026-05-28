@@ -12,17 +12,17 @@ El diseño implementa operaciones aritméticas de punto flotante y fue validado 
 
 El módulo principal implementado es:
 
-* **mac_mas_core**
+* `mac_mas_core`
 
 Submódulos utilizados:
 
-* fpmul
-* sum_res_pp
-* rounder
-* add_renorm
-* leading_zero_norm
-* exp_mant_logic
-* op_sign_logic
+* `fpmul`
+* `sum_res_pp`
+* `rounder`
+* `add_renorm`
+* `leading_zero_norm`
+* `exp_mant_logic`
+* `op_sign_logic`
 
 El sistema soporta:
 
@@ -56,15 +56,15 @@ Casos evaluados:
 * MAC TEST 1
 * MAC TEST 2
 * MAS TEST
-* Caso excepcional de reset
+* Caso de reset
 
-Las formas de onda fueron visualizadas usando **GTKWave**.
+Las formas de onda fueron visualizadas utilizando **GTKWave**.
 
 ---
 
 ## Caracterización del chip
 
-Resultados principales obtenidos:
+Resultados principales obtenidos durante el flujo STA y análisis de potencia:
 
 | Parámetro       | Resultado |
 | --------------- | --------- |
@@ -73,7 +73,7 @@ Resultados principales obtenidos:
 | Switching Power | 3.832 mW  |
 | Leakage Power   | 9.14 nW   |
 
-Se realizaron análisis de:
+También se realizaron análisis de:
 
 * Área
 * Timing (WNS/TNS)
@@ -84,17 +84,48 @@ Se realizaron análisis de:
 
 ---
 
+## Layout final
+
+El diseño físico final generado mediante OpenLane incluye:
+
+* Archivo GDSII (`mac_mas_core.gds`)
+* Netlist post-layout
+* Archivos DEF y LEF
+* Archivos SPEF para extracción parasítica
+
+El layout puede visualizarse usando **KLayout**.
+
+---
+
+## Ejecución de simulaciones
+
+Para ejecutar las simulaciones:
+
+```bash
+cd test
+make
+```
+
+---
+
+## GitHub Actions
+
+El repositorio incluye verificación automática mediante **GitHub Actions** para ejecutar simulaciones de Verilog automáticamente en cada `push`.
+
+---
+
 ## Estructura del repositorio
 
 ```txt
 src/        -> Código fuente Verilog
-test/       -> Testbenches
+test/       -> Testbenches y Makefile
 config/     -> Configuración OpenLane y constraints
 reports/    -> Reportes STA y potencia
-layout/     -> Layout final generado
-docs/       -> Informe/PDF del proyecto
+layout/     -> Layout físico final
+docs/       -> Informe del proyecto
 ```
-"El repositorio incluye verificación automática mediante GitHub Actions para ejecutar simulaciones de Verilog en cada push."
+
+---
 
 ## Autores
 
