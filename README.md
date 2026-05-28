@@ -97,17 +97,6 @@ El layout puede visualizarse usando **KLayout**.
 
 ---
 
-## Ejecución de simulaciones
-
-Para ejecutar las simulaciones:
-
-```bash
-cd test
-make
-```
-
----
-
 ## GitHub Actions
 
 El repositorio incluye verificación automática mediante **GitHub Actions** para ejecutar simulaciones de Verilog automáticamente en cada `push`.
